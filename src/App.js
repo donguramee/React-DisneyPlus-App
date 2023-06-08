@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import requests from "./api/request";
 import "./App.css";
 import Banner from "./components/Banner";
 import Category from "./components/Category";
 import Nav from "./components/Nav";
+import Row from "./components/Row";
 
 function App() {
   return (
@@ -10,6 +12,18 @@ function App() {
       <Nav />
       <Banner />
       <Category />
+      <Row title="Trending Now" id="TN" fetchUrl={requests.fetchTrending} />
+      <Row title="Top Rated" id="TR" fetchUrl={requests.fetchTopRated} />
+      <Row
+        title="Action movies"
+        id="AM"
+        fetchUrl={requests.fetchActionMovies}
+      />
+      <Row
+        title="Comedy Movies"
+        id="CM"
+        fetchUrl={requests.fetchComedyMovies}
+      />
     </Container>
   );
 }
