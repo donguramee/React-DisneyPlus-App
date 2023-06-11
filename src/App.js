@@ -5,6 +5,7 @@ import Banner from "./components/Banner";
 import Category from "./components/Category";
 import Nav from "./components/Nav";
 import Row from "./components/Row";
+//git satus
 
 function App() {
   return (
