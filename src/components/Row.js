@@ -1,13 +1,13 @@
 import axios from "../api/axios";
 import React, { useCallback, useEffect, useState } from "react";
 
-const Row = (title, id, fetchUrl) => {
-  const [movies, setmovies] = useState([]);
+const Row = ({ title, id, fetchUrl }) => {
+  const [movies, setMovies] = useState([]);
 
   const fetchMovieData = useCallback(async () => {
     const response = await axios.get(fetchUrl);
     console.log("response", response);
-    setmovies(response.data.results);
+    setMovies(response.data.results);
   }, [fetchUrl]);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const Row = (title, id, fetchUrl) => {
             <img
               key={movie.id}
               className="row__poster"
-              src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+              src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
               alt={movie.name}
             />
           ))}
