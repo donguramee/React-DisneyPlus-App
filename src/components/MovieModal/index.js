@@ -15,3 +15,4 @@ const MovieModal = ({
 };
 
 export default MovieModal;
+//
