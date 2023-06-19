@@ -60,7 +60,7 @@ const Row = ({ title, id, fetchUrl }) => {
         </div>
       </div>
 
-      {setModalOpen && (
+      {modalOpen && (
         <MovieModal {...movieSelected} setModalOpen={setModalOpen} />
       )}
     </div>
@@ -68,4 +68,3 @@ const Row = ({ title, id, fetchUrl }) => {
 };
 
 export default Row;
-//
