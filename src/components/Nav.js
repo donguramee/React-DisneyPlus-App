@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 
 const Nav = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState("false");
   const { pathname } = useLocation();
   const [searchValue, setSearchValue] = useState("");
   const navigate = useNavigate();
@@ -17,9 +17,9 @@ const Nav = () => {
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
-      setShow(true);
+      setShow("true");
     } else {
-      setShow(false);
+      setShow("false");
     }
   };
 
