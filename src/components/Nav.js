@@ -14,6 +14,7 @@ const Nav = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  //
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
