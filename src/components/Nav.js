@@ -22,6 +22,7 @@ const Nav = () => {
       setShow("false");
     }
   };
+  //
 
   const handleChange = (e) => {
     setSearchValue(e.target.value);
